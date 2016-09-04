@@ -11,7 +11,7 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -26,6 +26,24 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+
+    @IBAction func chica() {
+        
+        let valorContexto = pizza(t: "Chica", m: "", q: "", i: [])
+        pushControllerWithName("masa", context: valorContexto)
+        
+    }
+    
+    @IBAction func mediana() {
+        
+        let valorContexto = pizza(t: "Mediana", m: "", q: "", i: [])
+        pushControllerWithName("masa", context: valorContexto)
+    }
+    
+    @IBAction func grande() {
+        let valorContexto = pizza(t: "Grande", m: "", q: "", i: [])
+        pushControllerWithName("masa", context: valorContexto)
     }
 
 }
